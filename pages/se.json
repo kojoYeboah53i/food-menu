@@ -1,0 +1,259 @@
+{   //You need to install FireCodeiScript font first
+	//https://github.com/kencrocken/FiraCodeiScript download this and just intstall the fonts one by one
+    //put the below code in vs code settings.json file after installing font and voila 
+    
+    "editor.fontFamily": "Fira Code iScript, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "comment",
+                "scope": [
+                    "comment"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Keyword Storage",
+                "scope": [
+                    "keyword",
+                    "keyword.control",
+                    "storage"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Entity",
+                "scope": [
+                    "entity.name.method",
+                    "entity.name.type.class",
+                    "entity.other.attribute-name"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Variable",
+                "scope": [
+                    "variable.language"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    }
+}
+
+{
+
+
+"editor.tokenColorCustomizations": {
+    "textMateRules": [{
+            "name": "Comment",
+            "scope": [
+                "comment",
+                "punctuation.definition.comment"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#4A4A4A"
+            }
+        },
+
+        {
+            "name": "Keyword, Storage",
+            "scope": [
+                "Keyword",
+                "Storage"
+            ],
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+
+        {
+            "name": "Keyword Control",
+            "scope": [
+                "keyword.control"
+            ],
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+
+        {
+            "scope": "entity.other.attribute-name",
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#78dce8"
+            }
+        },
+
+
+        {
+            "name": "entity.name.method.js",
+            "scope": [
+                "entity.name.method.js"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#82AAFF"
+            }
+        },
+
+
+        {
+            "name": "Language methods",
+            "scope": [
+                "variable.language"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#FF5370"
+            }
+        },
+
+
+        {
+            "name": "HTML Attributes",
+            "scope": [
+                "text.html.basic entity.other.attribute-name.html",
+                "text.html.basic entity.other.attribute-name"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#FFCB6B"
+            }
+        },
+
+
+        {
+            "name": "Decorators",
+            "scope": [
+                "tag.decorator.js entity.name.tag.js",
+                "tag.decorator.js punctuation.definition.tag.js"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#82AAFF"
+            }
+        },
+
+
+        {
+            "name": "ES7 Bind Operator",
+            "scope": [
+                "source.js constant.other.object.key.js string.unquoted.label.js"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#FF5370"
+            }
+        },
+
+        {
+            "name": "Markup - Italic",
+            "scope": [
+                "markup.italic"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": "#f07178"
+            }
+        },
+
+
+        {
+            "name": "Markup - Bold-Italic",
+            "scope": [
+                "markup.bold markup.italic",
+                "markup.italic markup.bold",
+                "markup.quote markup.bold",
+                "markup.bold markup.italic string",
+                "markup.italic markup.bold string",
+                "markup.quote markup.bold string"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                //"foreground": "#f07178"
+            }
+        },
+
+        {
+            "name": "Markup - Quote",
+            "scope": [
+                "markup.quote"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                //"foreground": ""
+            }
+        },
+        {
+            "scope": "variable.other",
+            "settings": {
+                "foreground": "#82fbff"
+            }
+        },
+        {
+            "scope": "entity.name.function",
+            "settings": {
+                "foreground": "#dfd9a8"
+            }
+        },
+        {
+            "scope": "support.function",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#dfd9a8"
+            }
+        },
+        {
+            "scope": "string",
+            "settings": {
+                "foreground": "#CE9178"
+            }
+        },
+    ]
+},
+
+
+"editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "entity.other.attribute-name", //HTML Attributes
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js", //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  }

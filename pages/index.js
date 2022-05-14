@@ -2,7 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 
-export default function Home() {
+
+export default function Home({ articles }) {
+  console.log('posts')
+  console.log(articles)
   return (
     <div >
       <Head>
@@ -17,4 +20,35 @@ export default function Home() {
      
     </div>
   )
+}
+
+
+
+export const getStaticProps = async () => {
+   
+  // const res =  await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
+  // const articles = await res.json();
+  // return {
+  //   props: {
+  //     articles,
+  //   },
+  // }
+
+  // convert roman numeral to number
+
+  // Roman contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M')
+  const roman = ['I', 'V', 'X', 'L', 'C', 'D', 'M'];
+  // Value contains the corresponding values for each roman numeral
+  const value = [1, 5, 10, 50, 100, 500, 1000];
+  // RomanNumeral contains the roman numeral for each value
+   
+
+  //get file extension
+  const ext = 'json';
+  //get file name
+  const fileName = 'posts';
+  //get file path
+  const filePath = `${__dirname}/../data/${fileName}.${ext}`;
+  //get file data
+  const fileData = await readFile(filePath, 'utf8');
 }
